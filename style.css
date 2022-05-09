@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --color-white:      #FFF;
+    --color-icon:       #EAE9EA;
+    --color-home:       #50CE6D;
+    --color-home-bg:    #EAF9EE;
+    --color-heart:      #F9B2C2;
+    --color-heart-bg:   #FCE5EA;
+    --color-chat:       #78A2F3;
+    --color-chat-bg:    #E6EFFE;
+    --color-setting:    #6A4FCE;
+    --color-setting-bg: #D5C9FF;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    --color: var(--color-icon);
+    --bg-color: var(--color-white);
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 24px;
+    color: var(--color);
+    background-color: var(--bg-color);
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 40px;
+
+    transition: .2s;
+}
+
+nav ul li:focus-within a {
+    padding: 10px 20px;
+}
+
+nav ul li a span {
+    font-size: 24px;
+}
+
+nav ul li a p {
+    font-size: 16px;
+    margin-left: 0;
+    max-width: 0;
+    overflow: hidden;
+
+    transition: .2s;
+}
+
+nav ul li:focus-within a p {
+    max-width: 100px;
+    margin-left: 10px;
+}
+
+nav ul li:nth-child(1):focus-within {
+    --color: var(--color-home);
+    --bg-color: var(--color-home-bg)
+}
+
+nav ul li:nth-child(2):focus-within {
+    --color: var(--color-heart);
+    --bg-color: var(--color-heart-bg)
+}
+
+nav ul li:nth-child(3):focus-within {
+    --color: var(--color-chat);
+    --bg-color: var(--color-chat-bg)
+}
+
+nav ul li:nth-child(4):focus-within {
+    --color: var(--color-setting);
+    --bg-color: var(--color-setting-bg)
+}
